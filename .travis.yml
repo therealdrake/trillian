@@ -18,9 +18,6 @@ cache:
 os:
   - linux
 
-go:
-  - "1.10"
-
 go_import_path: github.com/google/trillian
 
 env:
@@ -33,6 +30,10 @@ env:
 
 matrix:
   fast_finish: true
+  include:
+  - go: "1.10.x"
+    script: go get ${GOFLAGS} -d -t ./...
+  - go: "1.11.x"
 
 services:
   - docker
@@ -65,7 +66,6 @@ install:
   - export PATH="$(pwd)/../protoc/bin:$PATH"
   # googleapis is not Go code, but it's required for .pb.go regeneration because of API dependencies.
   - git clone --depth=1 https://github.com/googleapis/googleapis.git "$GOPATH/src/github.com/googleapis/googleapis"
-  - go get ${GOFLAGS} -d -t ./...
   - go get -d -t github.com/google/certificate-transparency-go/...
   - go get github.com/alecthomas/gometalinter
   - go get github.com/golang/protobuf/proto
