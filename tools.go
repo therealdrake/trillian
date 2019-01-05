@@ -17,8 +17,8 @@
 package tools
 
 import (
-	_ "github.com/coreos/etcd/cmd/etcd"
-	_ "github.com/coreos/etcd/cmd/etcdctl"
+	_ "github.com/coreos/etcd"
+	_ "github.com/coreos/etcd/etcdctl"
 	_ "github.com/golang/mock/gomock"
 	_ "github.com/golang/protobuf/protoc-gen-go"
 	_ "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway"

@@ -74,8 +74,8 @@ install:
   - go get github.com/golang/mock/mockgen
   - go get golang.org/x/tools/cmd/stringer
   - gometalinter --install
-  - go get github.com/coreos/etcd/cmd/etcd
-  - go get github.com/coreos/etcd/cmd/etcdctl
+  - go get github.com/coreos/etcd
+  - go get github.com/coreos/etcd/etcdctl
 
 
 before_script:
