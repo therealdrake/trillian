@@ -17,6 +17,7 @@
 package tools
 
 import (
+	_ "github.com/alecthomas/gometalinter"
 	_ "github.com/coreos/etcd"
 	_ "github.com/coreos/etcd/etcdctl"
 	_ "github.com/golang/mock/gomock"
