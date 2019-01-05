@@ -74,9 +74,8 @@ install:
   - go get github.com/golang/mock/mockgen
   - go get golang.org/x/tools/cmd/stringer
   - gometalinter --install
-  # install vendored etcd binary
-  - go install ./vendor/github.com/coreos/etcd/cmd/etcd
-  - go install ./vendor/github.com/coreos/etcd/cmd/etcdctl
+  - go get github.com/coreos/etcd/cmd/etcd
+  - go get github.com/coreos/etcd/cmd/etcdctl
 
 
 before_script:
